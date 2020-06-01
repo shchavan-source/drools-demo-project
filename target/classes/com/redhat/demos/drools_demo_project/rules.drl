@@ -22,5 +22,5 @@ no-loop
 when
 	Measurement( id == "color", $colorVal : val )
 then
-	controlSet.add($colorVal);
+	System.out.println( $colorVal );
 end

@@ -55,19 +55,19 @@ public class MyConfigurationObject {
         // Dispose KIE container
         KieContainerResource container = kieContainers.get(0);
         String containerId = container.getContainerId();
-        ServiceResponse<Void> responseDispose = kieServicesClient.disposeContainer(containerId);
-        if (responseDispose.getType() == ResponseType.FAILURE) {
-            System.out.println("Error disposing " + containerId + ". Message: ");
-            System.out.println(responseDispose.getMsg());
-            return;
-        }
-        System.out.println("Success Disposing container " + containerId);
+//        ServiceResponse<Void> responseDispose = kieServicesClient.disposeContainer(containerId);
+//        if (responseDispose.getType() == ResponseType.FAILURE) {
+//            System.out.println("Error disposing " + containerId + ". Message: ");
+//            System.out.println(responseDispose.getMsg());
+//            return;
+//        }
+//        System.out.println("Success Disposing container " + containerId);
         
         System.out.println("Executing Rules .... ");
         RuleServicesClient rulesClient = kieServicesClient.getServicesClient(RuleServicesClient.class);
         KieCommands commandsFactory = kieServices.getCommands();
         
-        Measurement m = new Measurement("test", "test");
+        Measurement m = new Measurement("color", "test");
         
         Command<?> insert = commandsFactory.newInsert(m);
         Command<?> fireAllRules = commandsFactory.newFireAllRules();
