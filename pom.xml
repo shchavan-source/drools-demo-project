@@ -58,7 +58,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     </dependencies>
     <build>
         <sourceDirectory>src</sourceDirectory>
-        <resources>
+        <!-- <resources>
         	<resource>
         		<directory>src/main/resources</directory>
         		<includes>
@@ -67,7 +67,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                 </includes>
                 <targetPath>.</targetPath>
         	</resource>
-        </resources>
+        </resources> -->
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
