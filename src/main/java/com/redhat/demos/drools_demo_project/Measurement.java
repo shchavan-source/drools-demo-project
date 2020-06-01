@@ -15,11 +15,18 @@
 
 package com.redhat.demos.drools_demo_project;
 
-public class Measurement {
+public class Measurement implements java.io.Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -34027937906638267L;
 	private String id;
 	private String val;
 
+	public Measurement() {
+	}
+	
 	public Measurement(String id, String val) {
 		super();
 		this.id = id;
