@@ -15,35 +15,12 @@
 
 package com.redhat.demos.drools_demo_project;
 
-public class Measurement {
-	
-	private String id;
-	private String val;
+global java.util.Set controlSet;
 
-	public Measurement(String id, String val) {
-		super();
-		this.id = id;
-		this.val = val;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public String getVal() {
-		return val;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Measurement [");
-		if (id != null)
-			builder.append("id=").append(id).append(", ");
-		if (val != null)
-			builder.append("val=").append(val);
-		builder.append("]");
-		return builder.toString();
-	}
-
-}
+rule "will execute per each Measurement having ID color"
+no-loop
+when
+	Measurement( id == "color", $colorVal : val )
+then
+	controlSet.add($colorVal);
+end
