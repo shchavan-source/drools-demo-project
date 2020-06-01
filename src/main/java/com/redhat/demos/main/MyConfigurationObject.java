@@ -1,4 +1,4 @@
-package org.redhat.drools.main;
+package com.redhat.demos.main;
 
 import java.util.Arrays;
 import java.util.HashSet;
