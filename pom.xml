@@ -57,6 +57,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         </dependency>
     </dependencies>
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <!-- <resources>
+        	<resource>
+        		<directory>src/main/resources</directory>
+        		<includes>
+                    <include>META-INF/kmodule.xml</include>
+                    <include>com/redhat/demos/drools_demo_project/rules.drl</include>
+                </includes>
+                <targetPath>.</targetPath>
+        	</resource>
+        </resources> -->
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
